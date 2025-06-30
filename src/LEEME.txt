@@ -1,0 +1,51 @@
+PROYECTO: Formulario Empresarial en Angular
+AUTOR: Stalin Ramírez
+
+DESCRIPCIÓN:
+Este proyecto es un formulario de contacto con diseño moderno, validaciones en todos los campos y simulación de envío de datos vía POST usando Postman.
+
+---
+
+REQUISITOS:
+- Node.js (versión 14 o superior)
+- Angular CLI
+- Navegador web
+
+---
+
+INSTRUCCIONES DE INSTALACIÓN:
+
+1. Clonar el repositorio desde GitHub:
+   https://github.com/StaRam996/formulario2
+
+2. Entrar al directorio del proyecto:
+   cd Formulario
+
+3. Instalar las dependencias:
+   npm install
+
+4. Iniciar la aplicación:
+   ng serve
+
+5. Abrir el navegador en:
+   http://localhost:4200
+
+---
+
+PRUEBA CON POSTMAN (simulación de envío POST):
+
+- Método: POST
+- URL: https://jsonplaceholder.typicode.com/posts
+- Body: raw (JSON)
+- Ejemplo de JSON:
+  {
+    "nombre": "Stalin Ramírez",
+    "email": "stalin@example.com",
+    "telefono": "0987654321",
+    "asunto": "Consulta de precios",
+    "mensaje": "Hola, estoy interesado en sus servicios."
+  }
+
+---
+
+NOTA: Este formulario solo simula el envío de datos. No guarda información en base de datos.
