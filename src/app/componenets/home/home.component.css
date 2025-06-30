@@ -1,0 +1,130 @@
+/* Contenedor principal más pequeño y compacto */
+.formulario-container {
+  max-width: 420px;       /* Más pequeño */
+  width: 90%;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Degradado azul elegante */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e7ff;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Título */
+.formulario-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #cbd5e1;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Cada campo */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+/* Etiquetas */
+.campo label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #d1d5db;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Inputs y textarea */
+.campo input,
+.campo textarea {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 400;
+  color: #f1f5f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  min-height: 36px;
+}
+
+.campo textarea {
+  min-height: 100px;
+  max-height: 280px;
+}
+
+/* Focus en inputs y textarea */
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.7);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Mensajes de error */
+.error {
+  color: #f87171;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 600;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
+/* Botón enviar */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.8);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+button[type="submit"]:disabled {
+  background-color: #4b5563;
+  box-shadow: none;
+  cursor: not-allowed;
+  color: #9ca3af;
+  text-shadow: none;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .formulario-container {
+    max-width: 95%;
+    padding: 20px 18px;
+  }
+
+  .formulario-container h2 {
+    font-size: 22px;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 13px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+  }
+}

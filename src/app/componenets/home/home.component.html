@@ -1,0 +1,38 @@
+<div class="formulario-container">
+  <h2>Contactanos</h2>
+
+  <form #formulario="ngForm" (ngSubmit)="enviarFormulario()" novalidate>
+
+    <div class="campo">
+      <label for="nombre">Nombre completo *</label>
+      <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" [(ngModel)]="nombre" #nombreCtrl="ngModel" />
+      <small *ngIf="nombreCtrl.invalid && nombreCtrl.touched" class="error">Ingresa un nombre válido.</small>
+    </div>
+
+    <div class="campo">
+      <label for="email">Correo electrónico *</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="email" #emailCtrl="ngModel" />
+      <small *ngIf="emailCtrl.invalid && emailCtrl.touched" class="error">Correo inválido.</small>
+    </div>
+
+    <div class="campo">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" pattern="^[0-9]{7,10}$" [(ngModel)]="telefono" #telCtrl="ngModel" />
+      <small *ngIf="telCtrl.invalid && telCtrl.touched" class="error">Teléfono inválido (7 a 10 dígitos).</small>
+    </div>
+
+    <div class="campo">
+      <label for="asunto">Asunto *</label>
+      <input type="text" id="asunto" name="asunto" minlength="4" required [(ngModel)]="asunto" #asuntoCtrl="ngModel" />
+      <small *ngIf="asuntoCtrl.invalid && asuntoCtrl.touched" class="error">Mínimo 4 caracteres.</small>
+    </div>
+
+    <div class="campo">
+      <label for="mensaje">Mensaje *</label>
+      <textarea id="mensaje" name="mensaje" required minlength="20" [(ngModel)]="mensaje" #mensajeCtrl="ngModel"></textarea>
+      <small *ngIf="mensajeCtrl.invalid && mensajeCtrl.touched" class="error">Mínimo 20 caracteres.</small>
+    </div>
+
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+  </form>
+</div>
